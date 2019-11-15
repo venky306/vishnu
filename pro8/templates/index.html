@@ -1,0 +1,24 @@
+<html>
+<body>
+<form action="/index/" method="post"> {% csrf_token %}
+<table align="center" border="3">
+
+    <tr>
+        <td><input type="text" placeholder="FIRST NAME" name="first name" required></td>
+    </tr>
+    <tr>
+        <td><input type="text" placeholder="SECOND NAME" name="second name" required></td>
+    </tr>
+    <tr>
+        <th><button type="submit"> SHOW </button></th>
+    </tr>
+</table>
+</form>
+    {%  if message %}
+        <h3 align="center">  FULL NAME IS :{{ message  }}</h3>
+    {% endif %}
+<form action="/del/">
+    <h3 align="center"><button type="submit">REST</button></h3>
+</form>
+</body>
+</html>
